@@ -1,1 +1,1 @@
-*Repository for MART 461 Projects*
+* Repository for MART 461 Projects
