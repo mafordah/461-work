@@ -16,20 +16,21 @@
             <br />
             <h2>Registration</h2>
             <br />
+            <asp:label ID="Label1" runat="server"></asp:label>
             <br />
             Username
             <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
             &nbsp;<br />
             <br />
             Password
-            <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <br />
             <br />
-            <asp:Button ID="btnSubmit" runat="server" Text="Login" />
+            <asp:Button ID="btnSubmit" runat="server" Text="Login" OnClick="Submit" />
             <br />
             <br />
-            <asp:Button ID="btnRegister" runat="server" Text="Register" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
 
         </div>
     </form>

@@ -11,9 +11,19 @@ namespace homework3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string firstname = Request.QueryString["firstname"];
+            string lastname = Request.QueryString["lastname"];
+            Label1.Text = "welcome" + firstname + " " + lastname;
 
         }
-        protected void Submit()
+        protected void Submit(object sender, EventArgs e)
+        {
+            //Response.Redirect("Login.aspx?firstname=" + txtUserName.Text + "&lastname=" + txtPassword.Text);
+            Response.Redirect("Login.aspx?firstname=" + txtUserName.Text );
+
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <h1>Griz eSports</h1>
+    <div class="form">
+      <h2>Registration</h2>
+      <form action="info.php?firstTime=true" method="POST">
+        <label>First Name</label>
+        <input type="text" id="txtFirstName" name="txtFirstName">
+        <label>Last Name</label>
+        <input type="text" id="txtLastName" name="txtLastName">
+        <br /><br />
+        <label>Gamer Tag</label>
+        <input type="text" id="txtGamerTag" name="txtGamerTag">
+        <br /><br />
+        <label>Address</label>
+        <input type="text" id="txtAddress" name="txtAddress">
+        <br />
+        <label>City</label>
+        <input type="text" id="txtCity" name="txtCity">
+        <label>State</label>
+        <input type="text" id="txtState" name="txtState" maxlength="2">
+        <label>Zip Code</label>
+        <input type="number" id="txtZipCode" name="txtZipCode">
+        <br /><br />
+        <label>Phone</label>
+        <input type="number" id="txtPhone" name="txtPhone">
+        <br /><br />
+        <label>Email</label>
+        <input type="text" id="txtEmail" name="txtEmail">
+        <br />
+        <label>Password</label>
+        <input type="text" id="txtPassword" name="txtPassword">
+        <br />
+        <label>Comfirm Password</label>
+        <input type="text" id="txtComfirmPassword">
+        <br /><br />
+        <label>Would you like to recieve emails from us?</label>
+        <input type="radio" id="btnYesEmails" name="btnEmails" value="yes" checked="checked">Yes</input>
+        <input type="radio" id="btnNoEmails" name="btnEmails" value="no">No</input>
+        <br /> <br />
+        <div class="center">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+      <div class= "center">
+        <button onclick="window.location.href='./index.html';">Login</button>
+      </div>
+    </div>
+  </body>
+</html>
