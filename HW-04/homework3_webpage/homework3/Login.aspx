@@ -26,11 +26,22 @@
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <br />
+          
+            <asp:RadioButton ID="Yes" runat="server" OnCheckedChanged="RadioButton1_CheckedChanged" />
             <br />
+           
+            <asp:RadioButton ID="No" runat="server" />
+            <br />
+          
+            <asp:RadioButton ID="Maybe" runat="server" OnCheckedChanged="RadioButton3_CheckedChanged" />
+            <br />
+            <br />
+            <asp:Label ID="lblRadio" runat="server"></asp:Label>
+            <asp:Button ID="submitRadio" runat="server" Text="Button" OnClick="submitRadio_Click" />
+            <br />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" style="margin-bottom: 0px" />
+
             <asp:Button ID="btnSubmit" runat="server" Text="Login" OnClick="Submit" />
-            <br />
-            <br />
-            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
 
         </div>
     </form>

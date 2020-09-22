@@ -28,11 +28,26 @@ namespace homework3
             string password = string.Empty;
             userName = Request.Cookies["username"].Value;
             password = Request.Cookies["password"].Value;
-            
+
 
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
