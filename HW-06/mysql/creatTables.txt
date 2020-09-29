@@ -1,0 +1,35 @@
+CREATE TABLE `addresses` (
+  `addressID` int NOT NULL,
+  `address1` varchar(250) DEFAULT NULL,
+  `address2` varchar(250) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `stateID` int DEFAULT NULL,
+  `zipCode` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`addressID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `games` (
+  `gameID` int NOT NULL,
+  `gameName` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`gameID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `people` (
+  `peopleID` int NOT NULL,
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
+  `gamerTag` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `PWD` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `addressID` int DEFAULT NULL,
+  `gameID` int DEFAULT NULL,
+  PRIMARY KEY (`peopleID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `states` (
+  `stateID` int NOT NULL,
+  `stateName` varchar(45) DEFAULT NULL,
+  `stateAbbreviation` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`stateID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
