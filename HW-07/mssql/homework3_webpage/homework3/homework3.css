@@ -1,0 +1,103 @@
+﻿body {
+    background: #f0f0f0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding: 5%;
+}
+
+h2 {
+    text-align: center;
+    color: #70002e;
+}
+
+label {
+    color: grey;
+    font-family: sans-serif;
+    line-height: 20px;
+}
+
+input[type=text] {
+    width: calc(100% - 10px);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+input[type=submit] {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #660033;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.form-item {
+    flex: auto;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: 5%;
+    margin-top: 5vh;
+    max-width: 500px;
+    height: calc(90vh - 40px);
+    background-color: white;
+    padding: 20px;
+    line-height: 20px;
+    box-shadow: rgba(0,0,0,0.2) 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group-item {
+    width: 100%;
+    
+    float: left;
+}
+
+.form-chGame {
+    display: flex;
+    flex-direction: column;
+}
+
+.city {
+    flex: 4;
+}
+
+.state{
+    flex: 1 2;
+}
+
+.zip {
+    flex: 2 2;
+}
+
+.form-scroll {
+    flex: auto;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .form {
+        margin: auto;
+        height: inherit;
+        max-width: none;
+    }
+}
