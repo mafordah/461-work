@@ -1,0 +1,10 @@
+First test error messages in ASP.
+Check for SQL injection with "1=1" and "=" in all text boxes
+Make sure inputs are protected against XSS attacks
+	-test that malicious inputs are blocked
+
+
+I haven't been able to test this properly yet. I need to take some time out to review
+what is actually going on here still. I think I implemented it properly in PHP but
+I've had some issues with ASP. I will certainly be rewatching more class videos this
+week and taking some time during the day off.
