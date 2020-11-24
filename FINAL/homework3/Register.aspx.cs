@@ -10,24 +10,48 @@ using System.Data.SqlClient;
 
 namespace homework3
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string myConnectionString =
-                ConfigurationManager.ConnectionStrings["FinalConnectionString"].ToString();
-            //  Response.Write(myConnectionString);
-            SqlConnection myConnection;
-
-            myConnection = new SqlConnection(myConnectionString);
-            myConnection.Open();
+            
         }
 
         
+        protected void ValidateConduct(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = chConduct.Checked;
+        }
+
 
         protected void Submit(object sender, EventArgs e)
         {
-            
+            string company = txtCompany.Text;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string email = txtEmail.Text;
+            string PWD = txtPassword.Text;
+            string subscribed;
+            string admin = "No";
+
+            if (chSubcribe.Checked)
+            {
+                subscribed = "Yes";
+            } else
+            {
+                subscribed = "No";
+            }
+
+            Users user = new Users();
+
+            DataSet ds = user.addUser(company, firstName, lastName, email, PWD, subscribed, admin);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                int userID = Convert.ToInt32(ds.Tables[0].Rows[0]["userID"].ToString());
+                Session["user"] = userID;
+                Response.Redirect("./Welcome.aspx");
+            }
         }
     }
 }

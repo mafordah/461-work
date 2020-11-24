@@ -1,11 +1,17 @@
 ﻿body {
     background: #f0f0f0;
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    line-height: 20px;
 }
 
 h1 {
-    color: white;
+    color: #d60f0f;
     text-align: center;
     padding: 5%;
 }
@@ -13,6 +19,10 @@ h1 {
 h2 {
     text-align: center;
     color: #d60f0f;
+}
+
+h3 {
+    color: black;
 }
 
 a {
@@ -36,7 +46,37 @@ input[type=text] {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-input[type=submit] {
+#btnRegister {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #d60f0f;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+}
+
+#btnLogin {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #d60f0f;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+}
+
+#btnLogout {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #d60f0f;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+}
+
+/*input[type=submit] {
     width: 100px;
     padding: 10px;
     border: none;
@@ -44,8 +84,7 @@ input[type=submit] {
     color: white;
     font-family: 'Kumbh Sans', sans-serif;
     text-align:center;
-}
-
+}*/
 .center {
     text-align: center;
 }
@@ -116,7 +155,8 @@ input[type=submit] {
     background-color: white;
     width: 100%;
     min-height: 150px;
-    position: relative ;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     box-shadow: rgba(0,0,0,0.2) 10px 3px 20px;
@@ -142,14 +182,69 @@ input[type=submit] {
 
 .tabs{
     flex: auto;
-    margin-left: 30px;
-    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.tabs:hover {
+    color: #d60f0f;
+}
+
+a .tabs{
+    color: black;
 }
 
 .search {
-
     text-align: right;
-    margin-top: 110px;
+    align-self: flex-end;
+    padding: 10px;
+}
+
+#btnSearch {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #d60f0f;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+}
+
+.icons{
+    margin-right: 40px;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#profile {
+    height: 237px;
+    width: 237px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.aboutHeader {
+    height: 237px;
+    width: 237px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#aboutTxt {
+    text-align: left;
+    padding: 40px;
+    padding-bottom: 0px;
+}
+
+.hero {
+    width: 100%;
 }
 
 .body {
@@ -160,22 +255,50 @@ input[type=submit] {
 }
 
 .filters {
-    margin: 20px 10px 10px 0px;
+    margin: 10px 10px 0px 0px;
+    text-align: center;
     background-color: white;
-    width: 20vw;
-    height: calc(100vh - 200px);
+    width: 257px;
     flex: auto;
 }
 
+.types {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: #d60f0f;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.types:hover{
+    color: black;
+}
+
 .items {
-    margin: 20px 0px 10px 10px;
+    margin: 10px 0px 0px 0px;
+    padding: 20px;
     background-color: white;
     width: 80vw;
-    height: calc(100vh - 200px);
     flex: auto;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: white;    
+    text-align: center;
+}
+
+.footer {
+    background-color: white;
+    width: 100%;
+    min-height: 150px;
+    margin-top: 10px;
+    border: none;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

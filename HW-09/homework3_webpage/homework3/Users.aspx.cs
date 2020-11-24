@@ -15,8 +15,8 @@ namespace homework3
         protected void Page_Load(object sender, EventArgs e)
         {
             Events myEvents = new Events();
-            // DataSet myDataSet = myEvents.getPeople();
-            DataSet myDataSet = myEvents.getPerson(5);
+             DataSet myDataSet = myEvents.getPeople();
+            //DataSet myDataSet = myEvents.getPerson(5);
             gvPeople.DataSource = myDataSet.Tables[0];
             gvPeople.DataBind();
         }

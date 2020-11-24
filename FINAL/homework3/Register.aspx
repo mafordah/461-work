@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="homework3.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="homework3.Register" %>
 
 <!DOCTYPE html>
 
@@ -93,181 +93,19 @@
             </asp:CompareValidator>
             <br />
             <br />
-            <asp:Label ID="lblPhone" runat="server">Phone Number</asp:Label>
-            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhone" runat="server"
-                ControlToValidate="txtPhone"
-                ErrorMessage="*Phone Number is a required field"
-                ForeColor="Red">
-            </asp:RequiredFieldValidator>
-            <br />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorPhone" runat="server"
-                ControlToValidate="txtPhone"
-                ErrorMessage="*Invalid phone number"
-                ForeColor="Red"
-                ValidationExpression="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$">
-            </asp:RegularExpressionValidator>
-            <br />
-            <asp:Label ID="lblShippingStreetName" runat="server">Shipping Address</asp:Label>
-            <asp:TextBox ID="txtShippingStreetName1" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:TextBox ID="txtShippingStreetName2" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <div class="form-group">
-                <div class="form-group-item city">
-                    <asp:Label ID="lblShippingCity" runat="server">City</asp:Label>
-                    <asp:TextBox ID="txtShippingCity" runat="server"></asp:TextBox>
-                </div>
-                <div class="form-group-item state">
-                    <asp:Label ID="lblShippingState" runat="server">State</asp:Label>
-                    <asp:DropDownList ID="ddShippingState" runat="server" Width="100%">
-                        <asp:ListItem Value="AL">Alabama</asp:ListItem>
-                        <asp:ListItem Value="AK">Alaska</asp:ListItem>
-                        <asp:ListItem Value="AZ">Arizona</asp:ListItem>
-                        <asp:ListItem Value="AR">Arkansas</asp:ListItem>
-                        <asp:ListItem Value="CA">California</asp:ListItem>
-                        <asp:ListItem Value="CO">Colorado</asp:ListItem>
-                        <asp:ListItem Value="CT">Connecticut</asp:ListItem>
-                        <asp:ListItem Value="DC">District of Columbia</asp:ListItem>
-                        <asp:ListItem Value="DE">Delaware</asp:ListItem>
-                        <asp:ListItem Value="FL">Florida</asp:ListItem>
-                        <asp:ListItem Value="GA">Georgia</asp:ListItem>
-                        <asp:ListItem Value="HI">Hawaii</asp:ListItem>
-                        <asp:ListItem Value="ID">Idaho</asp:ListItem>
-                        <asp:ListItem Value="IL">Illinois</asp:ListItem>
-                        <asp:ListItem Value="IN">Indiana</asp:ListItem>
-                        <asp:ListItem Value="IA">Iowa</asp:ListItem>
-                        <asp:ListItem Value="KS">Kansas</asp:ListItem>
-                        <asp:ListItem Value="KY">Kentucky</asp:ListItem>
-                        <asp:ListItem Value="LA">Louisiana</asp:ListItem>
-                        <asp:ListItem Value="ME">Maine</asp:ListItem>
-                        <asp:ListItem Value="MD">Maryland</asp:ListItem>
-                        <asp:ListItem Value="MA">Massachusetts</asp:ListItem>
-                        <asp:ListItem Value="MI">Michigan</asp:ListItem>
-                        <asp:ListItem Value="MN">Minnesota</asp:ListItem>
-                        <asp:ListItem Value="MS">Mississippi</asp:ListItem>
-                        <asp:ListItem Value="MO">Missouri</asp:ListItem>
-                        <asp:ListItem Value="MT">Montana</asp:ListItem>
-                        <asp:ListItem Value="NE">Nebraska</asp:ListItem>
-                        <asp:ListItem Value="NV">Nevada</asp:ListItem>
-                        <asp:ListItem Value="NH">New Hampshire</asp:ListItem>
-                        <asp:ListItem Value="NJ">New Jersey</asp:ListItem>
-                        <asp:ListItem Value="NM">New Mexico</asp:ListItem>
-                        <asp:ListItem Value="NY">New York</asp:ListItem>
-                        <asp:ListItem Value="NC">North Carolina</asp:ListItem>
-                        <asp:ListItem Value="ND">North Dakota</asp:ListItem>
-                        <asp:ListItem Value="OH">Ohio</asp:ListItem>
-                        <asp:ListItem Value="OK">Oklahoma</asp:ListItem>
-                        <asp:ListItem Value="OR">Oregon</asp:ListItem>
-                        <asp:ListItem Value="PA">Pennsylvania</asp:ListItem>
-                        <asp:ListItem Value="RI">Rhode Island</asp:ListItem>
-                        <asp:ListItem Value="SC">South Carolina</asp:ListItem>
-                        <asp:ListItem Value="SD">South Dakota</asp:ListItem>
-                        <asp:ListItem Value="TN">Tennessee</asp:ListItem>
-                        <asp:ListItem Value="TX">Texas</asp:ListItem>
-                        <asp:ListItem Value="UT">Utah</asp:ListItem>
-                        <asp:ListItem Value="VT">Vermont</asp:ListItem>
-                        <asp:ListItem Value="VA">Virginia</asp:ListItem>
-                        <asp:ListItem Value="WA">Washington</asp:ListItem>
-                        <asp:ListItem Value="WV">West Virginia</asp:ListItem>
-                        <asp:ListItem Value="WI">Wisconsin</asp:ListItem>
-                        <asp:ListItem Value="WY">Wyoming</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-                <div class="form-group-item zip">
-                    <asp:Label ID="lblShippingZip" runat="server">Zip Code</asp:Label>
-                    <asp:TextBox ID="txtShippingZip" runat="server"></asp:TextBox>
-                </div>
-            </div>
-            <br />
-            <br />
-            <asp:Label ID="lblBillingStreetName" runat="server">Billing Address:</asp:Label>
-            <asp:Label ID="lblBillingStreetNameSame" runat="server">Same as Shipping Address</asp:Label>
-            <asp:CheckBox ID="chBillingStreetNameSame" runat="server" Checked="True" />
-            <asp:TextBox ID="txtBillingStreetName1" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:TextBox ID="txtBillingStreetName2" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <div class="form-group">
-                <div class="form-group-item city">
-                    <asp:Label ID="lblBillingCity" runat="server">City</asp:Label>
-                    <asp:TextBox ID="txtBillingCity" runat="server"></asp:TextBox>
-                </div>
-                <div class="form-group-item state">
-                    <asp:Label ID="lblBillingState" runat="server">State</asp:Label>
-                    <asp:DropDownList ID="ddBillingState" runat="server" Width="100%">
-                        <asp:ListItem Value="AL">Alabama</asp:ListItem>
-                        <asp:ListItem Value="AK">Alaska</asp:ListItem>
-                        <asp:ListItem Value="AZ">Arizona</asp:ListItem>
-                        <asp:ListItem Value="AR">Arkansas</asp:ListItem>
-                        <asp:ListItem Value="CA">California</asp:ListItem>
-                        <asp:ListItem Value="CO">Colorado</asp:ListItem>
-                        <asp:ListItem Value="CT">Connecticut</asp:ListItem>
-                        <asp:ListItem Value="DC">District of Columbia</asp:ListItem>
-                        <asp:ListItem Value="DE">Delaware</asp:ListItem>
-                        <asp:ListItem Value="FL">Florida</asp:ListItem>
-                        <asp:ListItem Value="GA">Georgia</asp:ListItem>
-                        <asp:ListItem Value="HI">Hawaii</asp:ListItem>
-                        <asp:ListItem Value="ID">Idaho</asp:ListItem>
-                        <asp:ListItem Value="IL">Illinois</asp:ListItem>
-                        <asp:ListItem Value="IN">Indiana</asp:ListItem>
-                        <asp:ListItem Value="IA">Iowa</asp:ListItem>
-                        <asp:ListItem Value="KS">Kansas</asp:ListItem>
-                        <asp:ListItem Value="KY">Kentucky</asp:ListItem>
-                        <asp:ListItem Value="LA">Louisiana</asp:ListItem>
-                        <asp:ListItem Value="ME">Maine</asp:ListItem>
-                        <asp:ListItem Value="MD">Maryland</asp:ListItem>
-                        <asp:ListItem Value="MA">Massachusetts</asp:ListItem>
-                        <asp:ListItem Value="MI">Michigan</asp:ListItem>
-                        <asp:ListItem Value="MN">Minnesota</asp:ListItem>
-                        <asp:ListItem Value="MS">Mississippi</asp:ListItem>
-                        <asp:ListItem Value="MO">Missouri</asp:ListItem>
-                        <asp:ListItem Value="MT">Montana</asp:ListItem>
-                        <asp:ListItem Value="NE">Nebraska</asp:ListItem>
-                        <asp:ListItem Value="NV">Nevada</asp:ListItem>
-                        <asp:ListItem Value="NH">New Hampshire</asp:ListItem>
-                        <asp:ListItem Value="NJ">New Jersey</asp:ListItem>
-                        <asp:ListItem Value="NM">New Mexico</asp:ListItem>
-                        <asp:ListItem Value="NY">New York</asp:ListItem>
-                        <asp:ListItem Value="NC">North Carolina</asp:ListItem>
-                        <asp:ListItem Value="ND">North Dakota</asp:ListItem>
-                        <asp:ListItem Value="OH">Ohio</asp:ListItem>
-                        <asp:ListItem Value="OK">Oklahoma</asp:ListItem>
-                        <asp:ListItem Value="OR">Oregon</asp:ListItem>
-                        <asp:ListItem Value="PA">Pennsylvania</asp:ListItem>
-                        <asp:ListItem Value="RI">Rhode Island</asp:ListItem>
-                        <asp:ListItem Value="SC">South Carolina</asp:ListItem>
-                        <asp:ListItem Value="SD">South Dakota</asp:ListItem>
-                        <asp:ListItem Value="TN">Tennessee</asp:ListItem>
-                        <asp:ListItem Value="TX">Texas</asp:ListItem>
-                        <asp:ListItem Value="UT">Utah</asp:ListItem>
-                        <asp:ListItem Value="VT">Vermont</asp:ListItem>
-                        <asp:ListItem Value="VA">Virginia</asp:ListItem>
-                        <asp:ListItem Value="WA">Washington</asp:ListItem>
-                        <asp:ListItem Value="WV">West Virginia</asp:ListItem>
-                        <asp:ListItem Value="WI">Wisconsin</asp:ListItem>
-                        <asp:ListItem Value="WY">Wyoming</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-                <div class="form-group-item zip">
-                    <asp:Label ID="lblBillingZip" runat="server">Zip Code</asp:Label>
-                    <asp:TextBox ID="txtBillingZip" runat="server"></asp:TextBox>
-                </div>
-            </div>
-            <br />
-            <br />
+            
 
             <asp:Label ID="lblConduct" runat="server">I have read and agreed to the terms and conditions</asp:Label>
             <asp:CheckBox ID="chConduct" runat="server" />
             <br />
+            <asp:CustomValidator ID="CustomValidatorConduct" runat="server"
+                ErrorMessage="*Required"
+                ForeColor="Red"
+                onservervalidate= "ValidateConduct">
+            </asp:CustomValidator>
             <br />
             <asp:Label ID="lblSubsribe" runat="server">I would like to subcribe to email communcation</asp:Label>
             <asp:CheckBox ID="chSubcribe" runat="server" Checked="True" />
-            <br />
             <br />
             <asp:Label ID="lblRegister" runat="server" Style="color: red"></asp:Label>
             <br />

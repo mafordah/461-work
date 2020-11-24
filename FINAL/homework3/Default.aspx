@@ -15,9 +15,9 @@
 
             <br />
             <div class="form-item center">
-                <h2>Redline Apparel Wholesale</h2>
+                <img src="/Images/redLineLogo.png" alt="Redline Apparel Logo" height="75" />
             </div>
-
+            <br />
             <asp:Label ID="lblEmail" runat="server">Email</asp:Label>
             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server"
