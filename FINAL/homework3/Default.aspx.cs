@@ -14,7 +14,7 @@ namespace homework3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            
         }
         protected void Submit(object sender, EventArgs e)
         {
@@ -33,7 +33,7 @@ namespace homework3
             }
             else
             {
-                
+                lblInvalid.Text = "Invalid Login";
             }
         }
     }

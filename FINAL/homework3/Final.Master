@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Final.master.cs" Inherits="homework3.Final" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./final.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form" runat="server">
+        <div class="header">
+            <div class="header-item logo" style="padding: 20px; text-align: center; align-self: center">
+                <a href="Home.aspx">
+                    <img src="/Images/redLineLogo.png" alt="Redline Apparel Logo" height="75" />
+                </a>
+            </div>
+            <div class="header-item links">
+                <a href="Home.aspx">
+                    <div id="link-home" class="tabs">Home</div>
+                </a>
+                <a href="About.aspx">
+                    <div id="link-about" class="tabs">About</div>
+                </a>
+                <a href="Contact.aspx">
+                    <div id="link-contact" class="tabs">Contact</div>
+                </a>
+            </div>
+            <div class="header-item search">
+                <div class="icons">
+                    <a href="Account.aspx">
+                        <asp:Image ID="userIcon" runat="server" class="icon" ImageUrl="/Images/account.png" alt="Redline Apparel Account"></asp:Image>
+                    </a>
+                    <asp:ImageButton ID="bagIcon" runat="server" class="icon" src="/Images/bag.png" alt="Redline Apparel Bag" OnClick="bagIcon_Click"></asp:ImageButton>
+                </div>
+                <br />
+
+                <asp:TextBox ID="txtSearch" runat="server" Style="width: 50%; height: 25px;"></asp:TextBox>
+                <asp:Button ID="btnSearch" input="submit" runat="server" Text="Search" CssClass="button" Style="margin-right: 50px" />
+
+            </div>
+
+        </div>
+        <div ID="bag" class="bag" visible="false" runat="server" style="text-align: right;">
+            <asp:Button runat="server" id="closeBag" class="types" style="text-align: right;" text="x" OnClick="bagIcon_Click"></asp:Button>
+            <div class="center"><h1>Your Bag is Empty</h1></div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <p style="width: 100%;"><br /> <br /> <br /> &#169; Redline Apparel </p>
+        </div>
+    </form>
+</body>
+</html>

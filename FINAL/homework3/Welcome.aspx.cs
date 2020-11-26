@@ -18,7 +18,7 @@ namespace homework3
             if (Session["user"] != null)
             {
                 int userID = Convert.ToInt32(Session["user"].ToString());
-                
+
                 Users user = new Users();
 
                 DataSet ds = user.getSingleUser(userID);
@@ -33,23 +33,27 @@ namespace homework3
                 Response.Redirect("./Default.aspx");
             }
 
-            Database database = new Database();
+            if (!IsPostBack)
+            {
+                Database database = new Database();
 
-            string query = "getAllStates";
-            DataSet states = database.getQueryWithoutParameters(query);
+                string query = "getAllStates";
+                DataSet states = database.getQueryWithoutParameters(query);
 
-            ddShippingState.DataTextField = states.Tables[0].Columns["stateName"].ToString();
-            ddShippingState.DataValueField = states.Tables[0].Columns["stateID"].ToString(); 
-            ddShippingState.DataSource = states.Tables[0]; 
-            ddShippingState.DataBind();
+                ddShippingState.DataTextField = "stateName";
+                ddShippingState.DataValueField = "stateID";
+                ddShippingState.DataSource = states.Tables[0];
+                ddShippingState.DataBind();
 
-            ddBillingState.DataTextField = states.Tables[0].Columns["stateName"].ToString();
-            ddBillingState.DataValueField = states.Tables[0].Columns["stateID"].ToString();
-            ddBillingState.DataSource = states.Tables[0];
-            ddBillingState.DataBind();
+                ddBillingState.DataTextField = "stateName";
+                ddBillingState.DataValueField = "stateID";
+                ddBillingState.DataSource = states.Tables[0];
+                ddBillingState.DataBind();
 
-            HideBilling();
+                HideBilling();
+            }
         }
+
 
         protected void HideBilling()
         {
@@ -84,13 +88,13 @@ namespace homework3
             string shippingAddress1 = txtShippingStreetName1.Text;
             string shippingAddress2 = txtShippingStreetName2.Text;
             string shippingCity = txtShippingCity.Text;
-            int shippingState = Convert.ToInt32(ddShippingState.SelectedValue);
+            int shippingState = Convert.ToInt32(ddShippingState.SelectedItem.Value);
             string shippingZip = txtShippingZip.Text;
 
             string billingAddress1 = txtBillingStreetName1.Text;
             string billingAddress2 = txtBillingStreetName2.Text;
             string billingCity = txtBillingCity.Text;
-            int billingState = Convert.ToInt32(ddBillingState.SelectedValue);
+            int billingState = Convert.ToInt32(ddBillingState.SelectedItem.Value);
             string billingZip = txtBillingZip.Text;
 
             Users user = new Users();

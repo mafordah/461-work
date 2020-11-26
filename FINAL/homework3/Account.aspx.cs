@@ -34,7 +34,6 @@ namespace homework3
                     if (!string.IsNullOrEmpty(ds.Tables[0].Rows[0]["photo"].ToString()))
                     {
                         profile.ImageUrl = "./Images/Users/" + ds.Tables[0].Rows[0]["photo"].ToString();
-                        userIcon.ImageUrl = "./Images/Users/" + ds.Tables[0].Rows[0]["photo"].ToString();
                     }
                     
                 

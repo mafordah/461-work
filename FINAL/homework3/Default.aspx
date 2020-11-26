@@ -40,6 +40,7 @@
                 ErrorMessage="*Password is a required field"
                 ForeColor="Red">
             </asp:RequiredFieldValidator>
+            <asp:Label ID="lblInvalid" class="center" style="color:red" runat="server"> </asp:Label>
             <br />
             <br />
 

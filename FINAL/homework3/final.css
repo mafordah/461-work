@@ -76,6 +76,16 @@ input[type=text] {
     text-align: center;
 }
 
+#btnAddInfo {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #d60f0f;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+}
+
 /*input[type=submit] {
     width: 100px;
     padding: 10px;
@@ -221,7 +231,7 @@ a .tabs{
     object-fit: cover;
 }
 
-#profile {
+.profile {
     height: 237px;
     width: 237px;
     padding: 10px;
@@ -289,6 +299,18 @@ a .tabs{
 .product {
     background-color: white;    
     text-align: center;
+}
+
+#bag {
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    position: fixed;
+    left: calc(50% - 400px);
+    top: calc(50% - 200px);
+    z-index: 2;
+    box-shadow: rgba(0,0,0,0.2) 10px 3px 20px;
+    border: none;
 }
 
 .footer {

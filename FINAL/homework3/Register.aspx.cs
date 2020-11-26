@@ -44,11 +44,13 @@ namespace homework3
 
             Users user = new Users();
 
-            DataSet ds = user.addUser(company, firstName, lastName, email, PWD, subscribed, admin);
+            user.addUser(company, firstName, lastName, email, PWD, subscribed, admin);
 
-            if (ds.Tables[0].Rows.Count > 0)
+            DataSet get = user.checkUser(email, PWD);
+
+            if (get.Tables[0].Rows.Count > 0)
             {
-                int userID = Convert.ToInt32(ds.Tables[0].Rows[0]["userID"].ToString());
+                int userID = Convert.ToInt32(get.Tables[0].Rows[0]["userID"].ToString());
                 Session["user"] = userID;
                 Response.Redirect("./Welcome.aspx");
             }
